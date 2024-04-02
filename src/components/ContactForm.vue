@@ -2,6 +2,7 @@
     <Form
     @submit="submitContact"
     :validation-schema="contactFormSchema"
+    method="post"
     >
         <div class="form-group">
             <label for="name">Tên</label>
@@ -54,7 +55,7 @@
         </div>
         
         <div class="form-group">
-            <button class="btn btn-primary">Lưu</button>
+            <button type="submit" class="btn btn-primary">Lưu</button>
             <button
             v-if="contactLocal._id"
             type="button"
